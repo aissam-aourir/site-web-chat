@@ -1,6 +1,11 @@
 --ici il me reste de recuperer la table des users
-
-
+CREATE TABLE users (
+    email VARCHAR(255) NOT NULL PRIMARY KEY,
+    password VARCHAR(255) NOT NULL,  -- Assurez-vous de sécuriser les mots de passe !
+    nom_utilisateur VARCHAR(255) NOT NULL,
+    prenom_utilisateur VARCHAR(255) NOT NULL,
+    date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 --ici la table des conversations
 CREATE TABLE conversations (
     email_utilisateur1 VARCHAR(255) NOT NULL,
